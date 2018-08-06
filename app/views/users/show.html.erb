@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bonjour <%= @user.first_name %></h1>
+
+
+<h2><%= link_to 'la fameuse liste', club_path %></h2>
+
+
+<h5>
+  <strong>First name:</strong>
+  <%= @user.first_name %>
+</h5>
+
+<h5>
+  <strong>Last name:</strong>
+  <%= @user.last_name %>
+</h5>
+
+<h5>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</h5>
+
+<h5>
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>|
+<%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
